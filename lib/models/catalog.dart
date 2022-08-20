@@ -9,6 +9,11 @@ class CatalogModel {
         image:
             "https://img.giznext.com/assets/model/2/96/apple-iphone-12-986bf5e98daf0059117d2f08f5a5e7.jpg"),
   ];
+  static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  // Get Item by position
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {

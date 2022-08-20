@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/utils/routes.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -34,6 +35,19 @@ class MyDrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
                 textScaleFactor: 1.2,
               ),
+              onTap: () => Navigator.pushNamed(context, MyRoutes.mainPageRoute),
+            ),
+            ListTile(
+              leading: Icon(
+                CupertinoIcons.profile_circled,
+                color: Colors.white,
+              ),
+              title: Text(
+                "Catalog App",
+                style: TextStyle(color: Colors.white),
+                textScaleFactor: 1.2,
+              ),
+              onTap: () => Navigator.pushNamed(context, MyRoutes.catalogRoute),
             ),
             ListTile(
               leading: Icon(
@@ -45,6 +59,7 @@ class MyDrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
                 textScaleFactor: 1.2,
               ),
+              onTap: () => Navigator.pushNamed(context, MyRoutes.profileRoute),
             ),
             ListTile(
               leading: Icon(

@@ -1,8 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:myapp/models/cart.dart';
 import 'package:myapp/models/catalog.dart';
 import 'package:myapp/pages/home_detail_page.dart';
+import 'package:myapp/widget/home_widget/add_to_cart.dart';
 
 import 'package:myapp/widget/home_widget/catalog_image.dart';
 import 'package:myapp/widget/themes.dart';
@@ -15,7 +17,7 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.items[index];
+        final catalog = CatalogModel.getByPosition(index);
         return InkWell(
           onTap: () => Navigator.push(
             context,
@@ -52,25 +54,18 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
-              catalog.desc.text.textStyle(context.captionStyle).make(),
+              catalog.name.text.lg.color(Colors.black).bold.make(),
+              catalog.desc.text
+                  .textStyle(context.captionStyle)
+                  .color(Colors.black)
+                  .make(),
               10.heightBox,
               ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding: EdgeInsets.zero,
                 children: [
                   "\$${catalog.price}".text.bold.xl.make(),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                          MyTheme.darkBluishColor,
-                        ),
-                        shape: MaterialStateProperty.all(
-                          StadiumBorder(),
-                        )),
-                    child: "Buy".text.make(),
-                  )
+                  AddToCart(catalog: catalog)
                 ],
               ).pOnly(right: 8.0)
             ],
