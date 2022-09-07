@@ -38,6 +38,7 @@ dependencies:
   velocity_x: ^3.5.0
   shimmer: ^2.0.0
   carousel_slider: ^4.1.1
+  video_player: ^2.4.7
 dev_dependencies:
   flutter_test:
     sdk: flutter

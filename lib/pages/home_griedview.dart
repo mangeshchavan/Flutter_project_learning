@@ -1,4 +1,4 @@
-// ignore_for_file: sort_child_properties_last, prefer_const_constructors
+// ignore_for_file: sort_child_properties_last, prefer_const_constructors, avoid_print
 import 'package:flutter/material.dart';
 
 class HomeGriedView extends StatelessWidget {
@@ -34,9 +34,11 @@ class HomeGriedView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onTap: () => {print("container 1 clicked")},
+                  onTap: () => {
+                    print("container 1 clicked"),
+                  },
                 ),
-                Text("Programs")
+                Text("Self Shivir")
               ],
             ),
             Column(
@@ -54,9 +56,11 @@ class HomeGriedView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onTap: () => {print("container 2 clicked")},
+                  onTap: () => {
+                    print("container 2 clicked"),
+                  },
                 ),
-                Text("Programs")
+                Text("Health")
               ],
             ),
             Column(
@@ -74,9 +78,11 @@ class HomeGriedView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onTap: () => {print("container 3 clicked")},
+                  onTap: () => {
+                    print("container 3 clicked"),
+                  },
                 ),
-                Text("Programs")
+                Text("Donation")
               ],
             ),
             Column(
@@ -94,9 +100,11 @@ class HomeGriedView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onTap: () => {print("container 4 clicked")},
+                  onTap: () => {
+                    print("container 4 clicked"),
+                  },
                 ),
-                Text("Programs")
+                Text("Intensive Seeker")
               ],
             ),
           ],

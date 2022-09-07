@@ -29,9 +29,10 @@ class HomeSlider extends StatelessWidget {
           options: CarouselOptions(
             autoPlayInterval: Duration(seconds: 10),
             autoPlay: true,
-            height: 250,
+            aspectRatio: 16 / 9,
             enlargeCenterPage: true,
             enlargeStrategy: CenterPageEnlargeStrategy.height,
+            viewportFraction: 1,
           ),
         ),
       ),

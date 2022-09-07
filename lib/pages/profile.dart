@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:myapp/models/VideoApp.dart';
 import 'package:myapp/widget/drawer.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -11,6 +12,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(),
+      body: VideoApp(),
     );
   }
 }

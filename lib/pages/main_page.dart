@@ -59,19 +59,25 @@ class MainPage extends StatelessWidget {
               height: 15,
             ),
             Row(
+              // ignore: prefer_const_literals_to_create_immutables
               children: [
                 Text(
                   "Explore",
                   textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20),
                 ),
               ],
             ),
             HomeGriedView(),
             Row(
+              // ignore: prefer_const_literals_to_create_immutables
               children: [
                 Text(
                   "Donate Your Prayer",
                   textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
               ],
             ),
